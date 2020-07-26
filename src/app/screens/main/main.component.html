@@ -50,3 +50,196 @@
     </div>
   </div>
 </header>
+
+<section class="bg-primary" id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 text-center">
+        <h2 class="section-heading">About</h2>
+        <p>
+          The internet is a free source of information and we want to take
+          advantage of this free technology. Bloodlife provides an online
+          platform that connects people who are in need of blood with donors. We
+          believe this will really help everyone. We believe we would be able to
+          help our fellow Filipinos in our little ways.
+        </p>
+        <a href="#inquire" class="page-scroll btn btn-default btn-l sr-button"
+          >Inquire Blood</a
+        >
+        <a href="#donor" class="page-scroll btn btn-default btn-l sr-button"
+          >Be A Donor</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-dark" id="donor">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 text-center">
+        <h2 class="section-heading">Be A Donor</h2>
+        <p>Message us to be a voluntary blood donor.</p>
+        <p>
+          By registering you will automatically be added to the active list of
+          blood donors, who will then receive Facebook notifications when there
+          is a match for your blood type.
+        </p>
+        <!--<p class="text-faded">Message us with this format <font color="#3B5998">'REGISTER <i>&lt Your Blood Type &gt</i>'</font>, for example : <font color="#F05F40"><i>REGISTER O+</i></p></font>-->
+
+        <br />
+        <br />
+
+        <div
+          class="fb-messengermessageus"
+          messenger_app_id="418952115149276"
+          page_id="365425240494680"
+          color="blue"
+          size="xlarge"
+        ></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-primary" id="inquire">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 text-center">
+        <h2 class="section-heading">Inquire</h2>
+        <p>
+          Please choose the blood type that you are looking for and provide your
+          contact details. Your inquiry will be broadcasted to the kind hearted
+          blood donors and they will reach you from the contact details that you
+          provide below.
+        </p>
+
+        <form method="POST" id="inquireForm" class="form-horizontal">
+          <fieldset>
+            <!-- Blood Types -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="selectbasic"
+                >Blood Type Needed</label
+              >
+              <div class="col-md-4">
+                <select id="bloodType" name="bloodType" class="form-control">
+                  <option value="O+">O+</option>
+                  <option value="O-">O-</option>
+                  <option value="A+">A+</option>
+                  <option value="A-">A-</option>
+                  <option value="B+">B+</option>
+                  <option value="B-">B-</option>
+                  <option value="AB+">AB+</option>
+                  <option value="AB-">AB-</option>
+                  <option value="ANY">Any Type</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Nearest City -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="selectbasic"
+                >Nearest City</label
+              >
+              <div class="col-md-4">
+                <select
+                  id="nearestCity"
+                  name="nearestCity"
+                  class="form-control"
+                >
+                  <option value="Antipolo">Antipolo</option>
+                  <option value="Agoo City">Agoo City</option>
+                  <option value="Bacolod City">Bacolod City</option>
+                  <option value="Baguio">Baguio</option>
+                  <option value="Cagayan de Oro">Cagayan de Oro</option>
+                  <option value="Caloocan">Caloocan</option>
+                  <option value="Cebu City">Cebu City</option>
+                  <option value="Dagupan City">Dagupan City</option>
+                  <option value="Davao City">Davao City</option>
+                  <option value="Lapu-lapu City">Lapu-lapu City</option>
+                  <option value="Manila">Manila</option>
+                  <option value="Pasig">Pasig</option>
+                  <option value="Quezon City">Quezon City</option>
+                  <option value="San Fernando City">San Fernando City</option>
+                  <option value="Taguig">Taguig</option>
+                  <option value="Tacloban">Tacloban City</option>
+                  <option value="Tagbiliran">Tagbilaran City</option>
+                  <option value="Zamboanga City">Zamboanga City</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Full Name -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="textinput"
+                >Your Full Name</label
+              >
+              <div id="fullName-group" class="col-md-4">
+                <input
+                  id="fullName"
+                  name="fullName"
+                  type="text"
+                  placeholder="Juan dela Cruz"
+                  class="form-control input-md"
+                />
+              </div>
+            </div>
+
+            <!-- Email Address 
+                      <div class="form-group">
+                          <label class="col-md-4 control-label" for="textinput">Your Email Address</label>
+                          <div id="emailAddress-group" class="col-md-4">
+                              <input id="emailAddress" name="emailAddress" type="text" placeholder="juandelacruz@gmail.com" class="form-control input-md">
+                          </div>
+                      </div> -->
+            <!-- Mobile Number -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="textinput"
+                >Your Mobile Number</label
+              >
+              <div id="contactNumber-group" class="col-md-4">
+                <input
+                  id="contactNumber"
+                  name="contactNumber"
+                  type="text"
+                  placeholder="09XXXXXXXXX"
+                  class="form-control input-md"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="textinput">
+                <div id="challenge"></div>
+              </label>
+              <div id="captcha-group" class="col-md-4">
+                <br />
+                <input
+                  id="captcha"
+                  name="captcha"
+                  type="text"
+                  placeholder="Verify the captcha text here"
+                  class="form-control input-md"
+                />
+              </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+              <div class="col-lg-12">
+                <button
+                  type="submit"
+                  id="submitBtn"
+                  name="submitBtn"
+                  class="btn btn-default btn-xl sr-button"
+                >
+                  Send Blood Inquiry
+                </button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
