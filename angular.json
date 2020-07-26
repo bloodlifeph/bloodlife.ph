@@ -20,8 +20,22 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": ["src/favicon.png", "src/assets"],
-            "styles": ["src/styles.css"],
-            "scripts": []
+
+            "styles": [
+              "src/thirdparty/bootstrap/css/bootstrap.min.css",
+              "src/thirdparty/font-awesome/css/font-awesome.min.css",
+              "src/thirdparty/magnific-popup/magnific-popup.css",
+              "src/assets/css/creative.css",
+              "src/styles.css"
+            ],
+
+            "scripts": [
+              "src/thirdparty/jquery/jquery.min.js",
+              "src/thirdparty/bootstrap/js/bootstrap.min.js",
+              "src/thirdparty/scrollreveal/scrollreveal.min.js",
+              "src/thirdparty/magnific-popup/jquery.magnific-popup.min.js",
+              "src/assets/js/creative.js"
+            ]
           },
           "configurations": {
             "production": {
