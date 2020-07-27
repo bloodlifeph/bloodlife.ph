@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from '@environment';
+import { FacebookService, InitParams } from 'ngx-facebook';
 
 declare var $: any;
 
@@ -9,12 +10,18 @@ declare var $: any;
   styleUrls: ['./main.component.css'],
 })
 export class MainComponent implements OnInit {
-  constructor() {
+  constructor(private facebookService: FacebookService) {
     console.log('\n\n\n\n\n\n', environment, '\n\n\n\n');
   }
 
   ngOnInit(): void {
     this.resetCaptcha();
+    this.initFacebookService();
+  
+  }
+  private initFacebookService(): void {
+    const initParams: InitParams = { xfbml:true, version:'v3.2'};
+    this.facebookService.init(initParams);
   }
 
   submitInquiry(): void {
